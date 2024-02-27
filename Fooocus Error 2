@@ -1,0 +1,150 @@
+(FooocusInYT) D:\YouTube\Fooocus\Fooocus_win64_2-1-831>.\python_embeded\python.exe -s Fooocus\entry_with_update.py --directml
+Already up-to-date
+Update succeeded.
+[System ARGV] ['Fooocus\\entry_with_update.py', '--directml']
+Python 3.10.9 (tags/v3.10.9:1dd9be6, Dec  6 2022, 20:01:21) [MSC v.1934 64 bit (AMD64)]
+Fooocus version: 2.1.865
+Running on local URL:  http://127.0.0.1:7865
+
+To create a public link, set `share=True` in `launch()`.
+Using directml with device:
+Total VRAM 1024 MB, total RAM 7538 MB
+Set vram state to: NORMAL_VRAM
+Always offload VRAM
+Device: privateuseone
+VAE dtype: torch.float32
+Using sub quadratic optimization for cross attention, if you have memory or speed issues try using: --attention-split
+Refiner unloaded.
+model_type EPS
+UNet ADM Dimension 2816
+Using split attention in VAE
+Working with z of shape (1, 4, 32, 32) = 4096 dimensions.
+Using split attention in VAE
+extra {'cond_stage_model.clip_g.transformer.text_model.embeddings.position_ids', 'cond_stage_model.clip_l.logit_scale', 'cond_stage_model.clip_l.text_projection'}
+Base model loaded: D:\YouTube\Fooocus\Fooocus_win64_2-1-831\Fooocus\models\checkpoints\juggernautXL_v8Rundiffusion.safetensors
+Request to load LoRAs [['sd_xl_offset_example-lora_1.0.safetensors', 0.1], ['None', 1.0], ['None', 1.0], ['None', 1.0], ['None', 1.0]] for model [D:\YouTube\Fooocus\Fooocus_win64_2-1-831\Fooocus\models\checkpoints\juggernautXL_v8Rundiffusion.safetensors].
+Loaded LoRA [D:\YouTube\Fooocus\Fooocus_win64_2-1-831\Fooocus\models\loras\sd_xl_offset_example-lora_1.0.safetensors] for UNet [D:\YouTube\Fooocus\Fooocus_win64_2-1-831\Fooocus\models\checkpoints\juggernautXL_v8Rundiffusion.safetensors] with 788 keys at weight 0.1.
+Fooocus V2 Expansion: Vocab with 642 words.
+Fooocus Expansion engine loaded for cpu, use_fp16 = False.
+Requested to load SDXLClipModel
+Requested to load GPT2LMHeadModel
+Loading 2 new models
+App started successful. Use the app with http://127.0.0.1:7865/ or 127.0.0.1:7865
+[Parameters] Adaptive CFG = 7
+[Parameters] Sharpness = 2
+[Parameters] ADM Scale = 1.5 : 0.8 : 0.3
+[Parameters] CFG = 4.0
+[Parameters] Seed = 4522745979763018955
+[Parameters] Sampler = dpmpp_2m_sde_gpu - karras
+[Parameters] Steps = 30 - 15
+[Fooocus] Initializing ...
+[Fooocus] Loading models ...
+Refiner unloaded.
+[Fooocus] Processing prompts ...
+[Fooocus] Preparing Fooocus text #1 ...
+[Prompt Expansion] The Ship of modern Navy sailing through a disastrous storm with ease, legendary beautiful pure colors, shining atmosphere, coherent very detailed, stunning, perfect composition, cinematic, great complimentary color, dynamic dramatic light, aesthetic,, highly detail, vibrant, inspired, brave, colorful, vivid, gorgeous, intricate, inspiring, amazing, creative, pretty, artistic, passionate, extremely fine
+[Fooocus] Preparing Fooocus text #2 ...
+[Prompt Expansion] The Ship of modern Navy sailing through a disastrous storm with ease, very detailed, futuristic, magical, mystical atmosphere, clear, sharp focus, extremely highly intricate, elegant, rich deep color, cinematic, artistic, true magic, pure light, innocent, beautiful, dramatic, dynamic, pristine, vibrant colors, aesthetic, joyful, fascinating, scenic, ambient, epic, thought
+[Fooocus] Encoding positive #1 ...
+[Fooocus] Encoding positive #2 ...
+[Fooocus] Encoding negative #1 ...
+[Fooocus] Encoding negative #2 ...
+[Parameters] Denoising Strength = 1.0
+[Parameters] Initial Latent shape: Image Space (896, 1152)
+Preparation time: 36.41 seconds
+[Sampler] refiner_swap_method = joint
+[Sampler] sigma_min = 0.0291671771556139, sigma_max = 14.614643096923828
+Requested to load SDXL
+Loading 1 new model
+loading in lowvram mode 64.0
+[Fooocus Model Management] Moving model(s) has taken 63.09 seconds
+  0%|                                                                                           | 0/30 [00:00<?, ?it/s][W D:\a\_work\1\s\pytorch-directml-plugin\torch_directml\csrc\engine\dml_heap_allocator.cc:120] DML allocator out of memory!
+  0%|                                                                                           | 0/30 [00:06<?, ?it/s]
+Traceback (most recent call last):
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\Fooocus\modules\async_worker.py", line 822, in worker
+    handler(task)
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\python_embeded\lib\site-packages\torch\utils\_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\python_embeded\lib\site-packages\torch\utils\_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\Fooocus\modules\async_worker.py", line 753, in handler
+    imgs = pipeline.process_diffusion(
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\python_embeded\lib\site-packages\torch\utils\_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\python_embeded\lib\site-packages\torch\utils\_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\Fooocus\modules\default_pipeline.py", line 361, in process_diffusion
+    sampled_latent = core.ksampler(
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\python_embeded\lib\site-packages\torch\utils\_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\python_embeded\lib\site-packages\torch\utils\_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\Fooocus\modules\core.py", line 313, in ksampler
+    samples = ldm_patched.modules.sample.sample(model,
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\Fooocus\ldm_patched\modules\sample.py", line 100, in sample
+    samples = sampler.sample(noise, positive_copy, negative_copy, cfg=cfg, latent_image=latent_image, start_step=start_step, last_step=last_step, force_full_denoise=force_full_denoise, denoise_mask=noise_mask, sigmas=sigmas, callback=callback, disable_pbar=disable_pbar, seed=seed)
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\Fooocus\ldm_patched\modules\samplers.py", line 712, in sample
+    return sample(self.model, noise, positive, negative, cfg, self.device, sampler, sigmas, self.model_options, latent_image=latent_image, denoise_mask=denoise_mask, callback=callback, disable_pbar=disable_pbar, seed=seed)
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\python_embeded\lib\site-packages\torch\utils\_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\python_embeded\lib\site-packages\torch\utils\_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\Fooocus\modules\sample_hijack.py", line 157, in sample_hacked
+    samples = sampler.sample(model_wrap, sigmas, extra_args, callback_wrap, noise, latent_image, denoise_mask, disable_pbar)
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\Fooocus\ldm_patched\modules\samplers.py", line 557, in sample
+    samples = self.sampler_function(model_k, noise, sigmas, extra_args=extra_args, callback=k_callback, disable=disable_pbar, **self.extra_options)
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\python_embeded\lib\site-packages\torch\utils\_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\Fooocus\ldm_patched\k_diffusion\sampling.py", line 701, in sample_dpmpp_2m_sde_gpu
+    return sample_dpmpp_2m_sde(model, x, sigmas, extra_args=extra_args, callback=callback, disable=disable, eta=eta, s_noise=s_noise, noise_sampler=noise_sampler, solver_type=solver_type)
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\python_embeded\lib\site-packages\torch\utils\_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\Fooocus\ldm_patched\k_diffusion\sampling.py", line 613, in sample_dpmpp_2m_sde
+    denoised = model(x, sigmas[i] * s_in, **extra_args)
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\python_embeded\lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\Fooocus\modules\patch.py", line 314, in patched_KSamplerX0Inpaint_forward
+    out = self.inner_model(x, sigma,
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\python_embeded\lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\Fooocus\ldm_patched\modules\samplers.py", line 271, in forward
+    return self.apply_model(*args, **kwargs)
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\Fooocus\ldm_patched\modules\samplers.py", line 268, in apply_model
+    out = sampling_function(self.inner_model, x, timestep, uncond, cond, cond_scale, model_options=model_options, seed=seed)
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\Fooocus\modules\patch.py", line 229, in patched_sampling_function
+    positive_x0, negative_x0 = calc_cond_uncond_batch(model, cond, uncond, x, timestep, model_options)
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\Fooocus\ldm_patched\modules\samplers.py", line 222, in calc_cond_uncond_batch
+    output = model.apply_model(input_x, timestep_, **c).chunk(batch_chunks)
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\Fooocus\ldm_patched\modules\model_base.py", line 85, in apply_model
+    model_output = self.diffusion_model(xc, t, context=context, control=control, transformer_options=transformer_options, **extra_conds).float()
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\python_embeded\lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\Fooocus\modules\patch.py", line 398, in patched_unet_forward
+    h = forward_timestep_embed(module, h, emb, context, transformer_options, time_context=time_context, num_video_frames=num_video_frames, image_only_indicator=image_only_indicator)
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\Fooocus\ldm_patched\ldm\modules\diffusionmodules\openaimodel.py", line 37, in forward_timestep_embed
+    x = layer(x, emb)
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\python_embeded\lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\Fooocus\ldm_patched\ldm\modules\diffusionmodules\openaimodel.py", line 229, in forward
+    return checkpoint(
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\Fooocus\ldm_patched\ldm\modules\diffusionmodules\util.py", line 189, in checkpoint
+    return func(*inputs)
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\Fooocus\ldm_patched\ldm\modules\diffusionmodules\openaimodel.py", line 242, in _forward
+    h = self.in_layers(x)
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\python_embeded\lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\python_embeded\lib\site-packages\torch\nn\modules\container.py", line 217, in forward
+    input = module(input)
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\python_embeded\lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\Fooocus\ldm_patched\modules\ops.py", line 40, in forward
+    return self.forward_ldm_patched_cast_weights(*args, **kwargs)
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\Fooocus\ldm_patched\modules\ops.py", line 35, in forward_ldm_patched_cast_weights
+    weight, bias = cast_bias_weight(self, input)
+  File "D:\YouTube\Fooocus\Fooocus_win64_2-1-831\Fooocus\ldm_patched\modules\ops.py", line 8, in cast_bias_weight
+    bias = s.bias.to(device=input.device, dtype=input.dtype, non_blocking=non_blocking)
+RuntimeError: Not enough memory resources are available to complete this operation.
+Total time: 138.50 seconds
+Keyboard interruption in main thread... closing server.
+^C
+(FooocusInYT) D:\YouTube\Fooocus\Fooocus_win64_2-1-831>
